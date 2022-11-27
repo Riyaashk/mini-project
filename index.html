@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>CSS Template</title>
+<title>Text summarization</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -12,7 +12,7 @@
 body{
   font-family: Arial, Helvetica, sans-serif;
   text-align:center;
-  background-color:white
+  background-color:;
 
 }
 
@@ -21,17 +21,41 @@ header {
   background-color: #666;
   padding: 70px;
   text-align: center;
-  font-size: 10px;
+  font-size: 25px;
   color: white;
 }
+header h1{
+float:left;
+font-size:15px;
+margin-top:-60px;
+margin-left:-60px;
+}
+ .blink {
+            animation: blinker 1.5s linear infinite;
+            color: white;
+            font-family: sans-serif;\
+           
+        }
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
 
 /* Create two columns/boxes that floats next to each other */
 nav {
   float: left;
-  width: 30%;
+  width: 10%;
   height: 300px; /* only for demonstration, should be removed */
   background: #ccc;
-  padding: 20px;
+  padding: 10px;
+}
+.logo img {
+  border-radius:50%;
+
+}
+.logo{
+font-size:10px;
 }
 
 /* Style the list inside the menu */
@@ -41,14 +65,30 @@ nav ul {
 }
 
 article {
-  float: left;
+  float:left;
   
-  padding: 20px;
-  width: 70%;
+  padding:5px ;
+ 
+  width: 90%;
   background-color: #f1f1f1;
   height: 300px; /* only for demonstration, should be removed */
 }
+article h3{
+color:black;
+text-size:5px;
+}
+article h1{
+float:left;
+font-size:15px;
+margin-top:10px;
+margin-left:10px;
+}
 
+.translate{
+text-align:right;
+font-size:10px;
+margin-top:px;
+}
 
 
 /* Clear floats after the columns */
@@ -59,13 +99,26 @@ section::after {
   
 }
 
+.count{
+background-color:#ccc;
+padding: 10px;
+float:center;
+text-align:left;
+}
+
 /* Style the footer */
 footer {
-  background-color: #777;
+  background-color:black;
   padding: 10px;
   text-align: center;
-  color: white;
+  margin-top:0px;
+  
 }
+footer p{
+color:white;
+font-size:10px;
+}
+
 
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 @media (max-width: 600px) {
@@ -74,35 +127,97 @@ footer {
     height: auto;
   }
 }
+
+
 </style>
 </head>
 <body>
 
-<h2>Text Summarizer</h2>
-<p></p>
+
+ <img src="http://2.bp.blogspot.com/-uCG_htNpDoA/US_q8_aTPaI/AAAAAAAAFks/GAF650hHQZw/s400/2-28-2013+6-36-38+PM.jpg" alt="Avatar" style="width:50%">
+ 
+
+
 <p></p>
 
 <header>
-  <h2>Enter your text here</h2>
+<h1>Original Text:</h1>
+ <p class="blink"> Enter your text here..</p>
+   <textarea  rows="10" cols="100"></textarea>
+  <br>
+  <input type="submit" value="Summarize">
 </header>
 
 <section>
 
   <nav>
-    <ul>
- <h1>Summary:</h1>
+
+<div class="logo">
+
+
+ <img src="https://play-lh.googleusercontent.com/0UZdQ2ExaJ62jQUZW1gBWO547913U0vFM2no-VB93_WOFZZAu5y2efWbBf05aY7ksw=s180" alt="Avatar" style="width:40px">
+ <p>Spell checker</p>
+
+
+ 
+<img src="https://tse2.mm.bing.net/th?id=OIP.L5sjswdgLdZesUB2e0rilwHaHa&pid=Api&P=0" alt="Avatar" style="width:40px">
+<p>Text - speech</p>
+
+
+<img src="http://images.techhive.com/images/article/2017/05/pcw-translate-primary-100723319-large.jpg" alt="Avatar" style="width:45px">
+
+<p>Translate</p>
+
+<img src="https://pngimg.com/uploads/share/share_PNG30.png" alt="Avatar" style="width:40px">
+<p>Share</p>
+
+ 
+
+</div>
+ 
       
   </nav>
   
   <article>
-    <h1></h1>
-    <p></p>
-    <p></p>
+   <h1>Summarized Text:</h1>
+    
+    
   </article>
-</section>
+  
+  </section>
+
+
+<div class="count">
+ <p>Original text count&ensp;&ensp;&ensp;&ensp;&ensp;:</p>
+   <p>Summarized text count&ensp;:</p>
+   
+
+</div>
 
 <footer>
-  <p>Summarized Word count:</p>
+ <div class="translate"> 
+                        
+     
+  
+       <div id="google_translate_element">
+                    </div>
+                     <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en'},
+                'google_translate_element'
+            );
+        }
+    </script>
+ 
+    <script type="text/javascript"
+            src=
+"https://translate.google.com/translate_a/element.js?
+cb=googleTranslateElementInit">
+    </script>
+</div>
+</div>
+   <p>&#169; 2022 Riyaash. All Rights Reserved
 </footer>
 
 </body>
